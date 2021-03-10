@@ -113,12 +113,12 @@ public class Item {
 
 					// buttons
 					output += "<td><form method='post' action='Items.jsp'>"
-							+ "<input name='btnUpdate' type='submit' value='Update'>"//update button
+							+ "<input name='btnUpdate' type='submit' class='btn btn-secondary' value='Update'>"//update button
 							+ "<input name='action' value='select' type='hidden'>"
 							+ "<input name='itemID' type='hidden' value='" + itemID + "'>" 
 							+ "</form></td>"
 							+ "<td><form method='post' action='Items.jsp'>"
-							+ "<input name='btnRemove' type='submit' value='Remove'>" //Remove Button
+							+ "<input name='btnRemove' type='submit' value='Remove' class='btn btn-danger'>" //Remove Button
 							+ "<input name='itemID' type='hidden' value='" + itemID + "'>" 
 							+ "<input name='action' value='remove' type='hidden'>"
 							+ "</form></td></tr>";
@@ -237,13 +237,13 @@ public class Item {
 					String itemDesc = rs.getString("itemDesc");
 
 					output += "<form method='post' action='Items.jsp'> "
-							+ "Item code: <input name='itemCode' type='text' value='"+ itemCode +"'><br>" 
-							+ "Item name: <input name='itemName' type='text' value='"+ itemName +"'><br> "
-							+ "Item price: <input name='itemPrice' type='text' value='"+ itemPrice +"'><br> "
-							+ "Item description: <input name='itemDesc' type='text' value='"+ itemDesc +"'><br> "
+							+ "Item code: <input name='itemCode' type='text' class='form-control' value='"+ itemCode +"'><br>" 
+							+ "Item name: <input name='itemName' type='text' class='form-control' value='"+ itemName +"'><br> "
+							+ "Item price: <input name='itemPrice' type='text' class='form-control' value='"+ itemPrice +"'><br> "
+							+ "Item description: <input name='itemDesc' type='text' class='form-control' value='"+ itemDesc +"'><br> "
 							+ "<input name='action' value='update' type='hidden'> "
-							+ "<input name='itemID' value='"+ itemID +"' type='hidden'> "
-							+ "<input name='btnSubmit' type='submit' value='Update Item "+ id +"'> "
+							+ "<input name='itemID' class='form-control' value='"+ itemID +"' type='hidden'> "
+							+ "<input name='btnSubmit' type='submit' class='btn btn-secondary' value='Update Item "+ id +"'> "
 							+ "</form> <br>"
 							+ "<a href='Items.jsp'>Cancel Updating</a>";
 				}
